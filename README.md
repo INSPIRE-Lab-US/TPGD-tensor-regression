@@ -37,7 +37,13 @@ The `Real` directory contains the code used to produce the results for ADHD diag
 ## Steps to reproduce the results
 ### Table II in the Paper: Performance of all Regression Algorithms
 
-To perform the ADHD prediction experiments for Table II in the paper, we had one function `LSRImageDenoising.m` that was used for each image by passing in different parameters to the function. In order to speed up our computations, we ran the`LSRImageDenoising.m` function three times for each image and then concatenated our representation errors in all three `.mat` files that our function returned to give us results corresponding to a total of 25 Monte Carlo trials.
+To generate the ADHD prediction experiment results for Table II in the paper, we trained models by running files in the `train` directory, and then generated results by running files in the `test` directory. 
+
+To train the five different regression algorithms for the KKI center, run the following files in the `train/kki` directory: `adhd_cp_kki.m`, `adhd_lasso_kki.m`, `adhd_svm_kki.m`, `adhd_tpgd_kki.m`, and `adhd_tucker_kki.m`. After these files are ran, the five different models will be saved in the `train/models` directory. To evaluate performance for the KKI center, run the `test_data_kki_all.m` and `test_data_kki_svr_lasso.m` files in the `test` directory, by uncommenting the appropriate lines for each method.
+
+To train the five different regression algorithms for the NYU center, run the following files in the `train/nyu` directory: `adhd_cp_nyu.m`, `adhd_lasso_nyu.m`, `adhd_svm_nyu.m`, `adhd_tpgd_nyu.m`, and `adhd_tucker_nyu.m`. After these files are ran, the five different models will be saved in the `train/models` directory. To evaluate performance for the KKI center, run the `test_data_nyu_all.m` and `test_data_nyu_svr_lasso.m` files in the `test` directory, by uncommenting the appropriate lines for each method.
+
+To train the five different regression algorithms for the Neuroimaging center, run the following files in the `train/nr` directory: `adhd_cp_nr.m`, `adhd_lasso_nr.m`, `adhd_svm_nr.m`, `adhd_tpgd_nr.m`, and `adhd_tucker_nr.m`. After these files are ran, the five different models will be saved in the `train/models` directory. To evaluate performance for the KKI center, run the `test_data_nr_all.m` and `test_data_nr_svr_lasso.m` files in the `test` directory, by uncommenting the appropriate lines for each method.
 
 
 <a name="contributors"></a>
