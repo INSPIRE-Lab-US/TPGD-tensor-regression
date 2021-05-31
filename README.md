@@ -50,7 +50,7 @@ To train the five different regression algorithms for the Neuroimaging center, r
 # Contributors
 
 The original algorithms and experiments were developed by the authors of the paper:
-- [Talal Ahmed](https://www.linkedin.com/in/talal-ahmed-5875034a/)
-- [Haroon Raja](https://www.eecs.tufts.edu/~haroon/)
+- [Talal Ahmed](http://www.inspirelab.us/)
+- [Haroon Raja](http://www.inspirelab.us/)
 - [Waheed U. Bajwa](http://www.inspirelab.us/)
 
